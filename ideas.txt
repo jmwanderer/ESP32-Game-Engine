@@ -7,3 +7,4 @@
 Reading about U8G2: https://github.com/olikraus/u8g2/wiki/setup_tutorial
 
 7. Perhaps elinate use of int for x,y coordinates in renderer.h
+8. Button click complete function
