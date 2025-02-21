@@ -25,7 +25,9 @@ bool InputManager::isButtonReleased() {
 }
 
 bool InputManager::isButtonClicked() {
+    // Return true after a press and release.
     if (click_start) {
+        // Button press has been seen.
         if (isButtonReleased()) {
             click_start = false;
             return true;
