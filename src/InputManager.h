@@ -10,6 +10,8 @@ public:
     bool isButtonPressed();
     bool isButtonDown();
     bool isButtonReleased();
+    bool isButtonClicked();
 
 private:
+    bool click_start;
 };

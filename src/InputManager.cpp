@@ -5,6 +5,7 @@ Button button(BUTTON_PIN);
 
 void InputManager::init() {
     button.begin();
+    click_start = false;
 }
 
 void InputManager::update(unsigned long dt) {
@@ -21,4 +22,16 @@ bool InputManager::isButtonDown() {
 
 bool InputManager::isButtonReleased() {
     return button.released();
+}
+
+bool InputManager::isButtonClicked() {
+    if (click_start) {
+        if (isButtonReleased()) {
+            click_start = false;
+            return true;
+        }
+    } else {
+        click_start = button.pressed();
+    } 
+    return false;
 }
