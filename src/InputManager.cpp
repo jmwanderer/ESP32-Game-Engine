@@ -5,22 +5,20 @@ Button button(BUTTON_PIN);
 
 void InputManager::init() {
     button.begin();
-    pinMode(BUTTON_PIN, INPUT_PULLUP);
-    buttonState = false;
-    lastButtonState = false;
 }
 
 void InputManager::update(unsigned long dt) {
 }
 
-bool InputManager::isButtonPressed(int button_num) {
+bool InputManager::isButtonPressed() {
     return button.pressed();
 }
 
-bool InputManager::isButtonDown(int button_num) {
+bool InputManager::isButtonDown() {
+    button.has_changed();  // 'Consume' the button press
     return button.read() == Button::PRESSED;
 }
 
-bool InputManager::isButtonReleased(int button_num) {
+bool InputManager::isButtonReleased() {
     return button.released();
 }
