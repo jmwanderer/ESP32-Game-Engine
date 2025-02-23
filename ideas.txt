@@ -1,0 +1,10 @@
+1. Allow passing in of button pin#
+2. Allow multiple buttons
+3. Allow button state of pressed vs one event
+4. Renderer sets display side
+5. Pass screen size to update
+6. Pass engine to update
+Reading about U8G2: https://github.com/olikraus/u8g2/wiki/setup_tutorial
+
+7. Perhaps elinate use of int for x,y coordinates in renderer.h
+8. Button click complete function

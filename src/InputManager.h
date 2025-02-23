@@ -1,7 +1,7 @@
 #pragma once
 #include <Arduino.h>
 
-#define BUTTON_PIN 9  // Adjust this for your hardware
+#define BUTTON_PIN D2  // Adjust this for your hardware
 
 class InputManager {
 public:
